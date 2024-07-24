@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+    footer ion-icon {
+      color: white;
+      transform: translateY(4px);
+      font-size: 1.2rem;
+    }
+  </style>
+
+  <link rel="stylesheet" href="./output.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body class="font-open_sans min-h-screen bg-main_bg text-gray">
+
+  <header class="p-8 flex justify-between items-center gap-7 bg-intro_email_bg">
+    <div>
+      <img src="./images/logo.svg" class="min-[412px]:h-8 sm:min-w-[7.5rem] h-6">
+    </div>
+
+    <nav>
+      <ul class="list-none flex md:gap-8 min-[340px]:gap-6 gap-3 items-center [&>li]:cursor-pointer
+                [&>li]:transition-colors [&>li]:duration-200 font-raleway
+                min-[378px]:text-[1rem] text-[.75rem]">
+        <li class="hover:text-white hover:underline">Features</li>
+        <li class="hover:text-white hover:underline">Team</li>
+        <li class="hover:text-white hover:underline">Sign In</li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="intro" class="w-screen bg-intro_email_bg flex flex-col items-center justify-center text-center
+                            px-9 py-12 relative isolate">
+
+    <div class="flex flex-col gap-6 items-center max-w-[600px]">
+    <img src="./images/illustration-intro.png">
+    <h1 class="text-4xl text-white font-semibold font-raleway max-w-[31ch]">
+      All your files in one secure location, accessible anywhere.
+    </h1>
+    <p class="max-w-[53ch]">
+      Fylo stores all your most important files in one secure location. Access them wherever 
+      you need, share and collaborate with friends family, and co-workers.
+    </p>
+    <button class="appearance-none cursor-pointer bg-cyan text-white font-raleway font-semibold px-20 py-3.5 rounded-3xl">
+      Get Started
+    </button>
+    </div>
+
+    <picture class="absolute bottom-0 left-0 right-0 z-[-1]">
+      <source media="(min-width: 400px)" srcset="./images/bg-curvy-desktop.svg">
+      <img src="./images/bg-curvy-mobile.svg">
+    </picture>
+  </section>
+  
+
+  <main class="w-screen bg-main_bg flex flex-col items-center gap-12">
+
+    <section class="max-w-[650px] w-11/12 px-9 py-12 grid grid-cols-[repeat(auto-fit,_minmax(230px,_1fr))] gap-16
+                    [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:gap-3 [&>div]:text-center">
+
+      <div>
+        <img src="./images/icon-access-anywhere.svg">
+        <h2 class="text-lg font-medium text-white font-raleway">
+          Access your files, anywhere
+        </h2>
+        <p>
+          The ability to use a smartphone, tablet, or computer to access your account means your 
+          files follow you everywhere.
+        </p>
+      </div>
+      <div>
+        <img src="./images/icon-security.svg">
+        <h2 class="text-lg font-medium text-white font-raleway">
+          Security you can trust
+        </h2>
+        <p>
+          2-factor authentication and user-controlled encryption are just a couple of the security 
+          features we allow to help secure your files.
+        </p>
+      </div>
+      <div>
+        <img src="./images/icon-collaboration.svg">
+        <h2 class="text-lg font-medium text-white font-raleway">
+          Real-time collaboration
+        </h2>
+        <p>
+          Securely share files and folders with friends, family and colleagues for live collaboration. 
+          No email attachments required.
+        </p>
+      </div>
+      <div>
+        <img src="./images/icon-any-file.svg">
+        <h2 class="text-lg font-medium text-white font-raleway">
+          Store any type of file
+        </h2>
+        <p>
+          Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+          file types to be securely stored and shared.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid min-[900px]:grid-cols-2 gap-12 mt-4 w-11/12 max-w-[1400px] justify-items-center items-center">
+      <img src="./images/illustration-stay-productive.png" class="self-center">
+
+      <section class="grid gap-4">
+        <h3 class="min-[900px]:max-w-[14ch] text-3xl font-raleway font-medium text-white">
+          Stay productive, wherever you are
+        </h3>
+        <p class="max-w-[63ch]">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+          storage needs.
+        </p>
+        <p class="max-w-[63ch]">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+          attachments required.
+        </p>
+
+        <p class="text-[cyan] hover:text-white transition-colors duration-300 border-b border-b-[cyan] hover:border-b-white flex items-center gap-1.5 pb-1 w-max cursor-pointer">
+          See how Fylo works <ion-icon name="arrow-forward-circle"></ion-icon>
+        </p>
+      </section>
+    </section>
+
+
+    <section id="testimonials" class="grid grid-cols-[repeat(auto-fit,_minmax(280px,_1fr))] gap-5 justify-items-center items-center w-11/12 mt-12 mb-80
+                max-w-[1400px]  [&>div]:p-8 [&>div]:bg-[#202a3c] [&>div]:shadow-2xl [&>div]:flex [&>div]:flex-col [&>div]:gap-6">
+      
+      <div class="relative">
+        <!-- <div class="absolute text-[cyan] text-[20rem] top-[-65%] left-[-5%] font-raleway z-[-2]">"</div> -->
+        <p>
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </p>
+        <div class="flex items-center gap-2">
+          <img src="./images/profile-1.jpg" class="rounded-full w-9">
+          <div class="flex flex-col gap-1">
+            <p class="font-semibold font-raleway text-white">
+              Satish Patel
+            </p>
+            <p class="text-xs">
+              Founder & CEO, Huddle
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <p>
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </p>
+        <div class="flex items-center gap-2">
+          <img src="./images/profile-2.jpg" class="rounded-full w-9">
+          <div class="flex flex-col gap-1">
+            <p class="font-semibold font-raleway text-white">
+              Bruce McKenzie
+            </p>
+            <p class="text-xs">
+              Founder & CEO, Huddle
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <p>
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </p>
+        <div class="flex items-center gap-2">
+          <img src="./images/profile-3.jpg" class="rounded-full w-9">
+          <div class="flex flex-col gap-1">
+            <p class="font-semibold font-raleway text-white">
+              Iva Boyd
+            </p>
+            <p class="text-xs">
+              Founder & CEO, Huddle
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="bg-[#0b1523] md:pt-40 sm:pt-44 pt-52 p-9 pb-1 relative w-full">
+    <section class="flex flex-col items-center gap-5 bg-intro_email_bg shadow-lg rounded-sm p-9 absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-50%] text-center w-max max-w-[90%]">
+      <h4 class="text-xl font-semibold text-white font-raleway">Get early access today</h4>
+      <p class="max-w-[78ch]">
+        It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+        questions, our support team would be happy to help you.
+      </p>
+      <form action="GET" class="flex gap-4 items-center flex-wrap justify-center">
+        <input type="email" name="email" id="email" placeholder="example@email.com"
+              class="appearance-none rounded-full px-8 py-3 bg-white placeholder:text-gray font-raleway md:w-80 max-[360px]:px-5 max-[360px]:py-2 max-[360px]:max-w-[90%] outline-none">
+        <button class="appearance-none cursor-pointer bg-cyan text-white font-raleway font-semibold px-9 py-3.5 rounded-3xl">
+          Get Started For Free
+        </button> 
+      </form>
+    </section>
+
+    <section class="flex flex-col gap-7">
+      <header>
+        <img src="./images/logo.svg" class="w-[7rem]">
+      </header>
+
+      <div class="flex gap-12 items-start flex-wrap md:justify-between">
+        <div class="flex items-start gap-3.5">
+          <ion-icon name="location" class="min-w-[1rem]"></ion-icon>
+          <p class="max-w-[30ch]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua
+          </p>
+        </div>
+
+        <ul class="list-none flex flex-col gap-4">
+          <li class="flex items-start gap-2.5">
+            <ion-icon name="call"></ion-icon> <a href="tel:+1-543-123-4567">+1-543-123-4567</a>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <ion-icon name="mail"></ion-icon> <a href="mailto:example@fylo.com">example@fylo.com</a>
+          </li>
+        </ul>
+        
+        <div class="flex items-start gap-16">
+        <ul class="list-none flex flex-col gap-3 [&>li]:transition-colors [&>li]:duration-300">
+          <li class="hover:text-white cursor-pointer">About Us</li>
+          <li class="hover:text-white cursor-pointer">Jobs</li>
+          <li class="hover:text-white cursor-pointer">Press</li>
+          <li class="hover:text-white cursor-pointer">Blog</li>
+        </ul>
+
+        <ul class="list-none flex flex-col gap-3 transition-colors duration-300">
+          <li class="hover:text-white cursor-pointer">Contact Us</li>
+          <li class="hover:text-white cursor-pointer">Terms</li>
+          <li class="hover:text-white cursor-pointer">Privacy</li>
+        </ul>
+                  
+      </div>
+
+        <ul class="flex items-center gap-3">
+          <li class="border group rounded-full border-gray hover:border-[cyan] w-8 h-8 flex items-center justify-center cursor-pointer hover:text-[cyan] transition-colors duration-300 [&>ion-icon]:translate-y-[0px]">
+            <ion-icon name="logo-facebook" class="group-hover:text-[cyan] transition-colors duration-300"></ion-icon>
+          </li>
+          <li class="border group rounded-full border-gray hover:border-[cyan] w-8 h-8 flex items-center justify-center cursor-pointer hover:text-[cyan] transition-colors duration-300 [&>ion-icon]:translate-y-[0px]">
+            <ion-icon name="logo-twitter" class="group-hover:text-[cyan] transition-colors duration-300"></ion-icon>
+          </li>
+          <li class="border group rounded-full border-gray hover:border-[cyan] w-8 h-8 flex items-center justify-center cursor-pointer hover:text-[cyan] transition-colors duration-300 [&>ion-icon]:translate-y-[0px]">
+            <ion-icon name="logo-instagram" class="group-hover:text-[cyan] transition-colors duration-300"></ion-icon>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <p class="attribution pt-10">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Benedict Jr</a>.
+    </p>
+  </footer>
+
+
+  
+  
+  
+  
+
+  
+  
+  
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
